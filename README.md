@@ -1,4 +1,8 @@
 ### Hi there 👋
+Project Title: "Tic Tac Toe Game."
+Project Description: This is a  Tic Tac Toe game, I have tried to make it colorful and attractive.
+Technologies Used: It is written in JavaScript, HTML, and CSS,
+Acknowledgments: Thanks, everyone.
 
 <!--
 **Sonikaguptaa/Sonikaguptaa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
