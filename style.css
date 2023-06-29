@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+}
+body {
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(167, 75, 75),
+    rgb(224, 163, 50),
+    rgb(162, 162, 95),
+    rgb(101, 184, 101),
+    rgb(54, 54, 113),
+    rgb(141, 101, 169),
+    rgb(183, 93, 183)
+  );
+  background-size: unset;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  color: rgb(20, 20, 20);
+}
+header {
+  height: 5vh;
+  border-radius: 10%;
+  text-shadow: 0px 0px 5px Yellow;
+  font-size: 25px;
+  font-weight: 900;
+  margin: auto;
+}
+main {
+  height: 80vh;
+}
+#main-wrapper {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  height: 100%;
+}
+#main-column {
+  width: 60%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 30px;
+  margin-top: 20px;
+}
+#side-area {
+  width: 40%;
+}
+.layout1 {
+  display: flex;
+  width: 80%;
+  height: 20%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#side-menu .button {
+  width: 25%;
+}
+#names-wrapper {
+  align-items: flex-start;
+
+  height: 8%;
+  margin-top: 10px;
+  font-size: 2vw;
+  font-weight: bolder;
+  text-shadow: 0px 0px 1px white;
+}
+#score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#counters {
+  margin-top: 5%;
+  text-align: start;
+  font-size: 2vw;
+  font-weight: bolder;
+  text-shadow: 0px 0px 2px white;
+}
+
+#player1 {
+  color: rgb(55, 9, 56);
+}
+#player2 {
+  color: #170833;
+}
+.button {
+  display: flex;
+  width: 60%;
+  height: 50%;
+  margin-bottom: 10px;
+  border-radius: 30%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(63, 50, 115, 0.7);
+  border: 5px solid rgb(103, 7, 7);
+  border-style: outset;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  text-shadow: -1px -1px 1px white;
+  transition: all ease 800ms;
+}
+.button:hover {
+  background-color: rgba(165, 165, 165, 0.9);
+  transition: all ease 800ms;
+}
+#play-area {
+  background: rgba(128, 128, 128, 0.3);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-radius: 10px;
+}
+
+#stamp {
+  z-index: 100;
+  position: absolute;
+  color: red;
+  transform: rotate(-40deg);
+  width: 100%;
+  font-size: 8vw;
+  font-weight: bolder;
+  text-shadow: 7px 7px 10px rgb(20, 20, 20);
+}
+.cell {
+  width: 33%;
+  height: 33%;
+  text-align: center;
+  padding: 1%;
+  border: solid 4px rgb(20, 20, 20);
+  transition: all 1500ms ease;
+  border-radius: 4%;
+}
+
+.cell:hover {
+  border-color: rgb(20, 20, 20);
+  box-shadow: 0px 0px 5px 5px rgb(248, 248, 248);
+  transition: all ease 1500ms;
+}
+#cell0 {
+  border-width: 0 4px 4px 0;
+}
+#cell1 {
+  border-width: 0 4px 4px 4px;
+}
+#cell2 {
+  border-width: 0 0 4px 4px;
+}
+#cell3 {
+  border-width: 4px 4px 4px 0;
+}
+#cell4 {
+  border-width: 4px 4px 4px 4px;
+}
+#cell5 {
+  border-width: 4px 0 4px 4px;
+}
+#cell6 {
+  border-width: 4px 4px 0 0;
+}
+#cell7 {
+  border-width: 4px 4px 0 4px;
+}
+#cell8 {
+  border-width: 4px 0 0 4px;
+}
+
+@keyframes controls-show {
+  0% {
+    left: -38%;
+    opacity: 0;
+  }
+  100% {
+    left: 17%;
+    opacity: 1;
+  }
+}
+@keyframes controls-hide {
+  0% {
+    left: 17%;
+    opacity: 1;
+  }
+  100% {
+    left: -38%;
+    opacity: 0;
+  }
+}
+@keyframes shake {
+  0% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 55%;
+  }
+}
+@keyframes fade-to-right {
+  0% {
+    opacity: 1;
+    left: 55%;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.fade {
+  animation: fade 2000ms ease 1 normal;
+}
+.stamp {
+  animation: stamp 800ms ease-in 1 normal;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes stamp {
+  0% {
+    font-size: 18vw;
+    text-shadow: 50px 50px 100px rgb(20, 20, 20);
+  }
+  100% {
+    font-size: 8vw;
+    text-shadow: 10px 10px 5px rgb(20, 20, 20);
+  }
+}
+.move-indicator {
+  animation: move-indicator 800ms linear alternate infinite;
+}
+@keyframes move-indicator {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.signX {
+  background: green url("signX.png") no-repeat center;
+  background-size: contain;
+}
+.signO {
+  background: yellow url("signO.png") no-repeat center;
+  background-size: contain;
+}
