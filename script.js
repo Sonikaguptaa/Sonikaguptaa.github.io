@@ -211,3 +211,11 @@ function setTurn() {
 // let cell1 = document.querySelector("#cell1");
 
 // (cell1.style.borderWidth = "0"), "0", "4px", "4px", "4px";
+
+// let cell2 = document.querySelector("#cell2");
+
+// (cell2.style.borderWidth = "0"), "0", "4px", "4px", "4px";
+
+// let cell3 = document.querySelector("#cell3");
+
+// (cell3.style.borderWidth = "0"), "0", "4px", "4px", "4px";
