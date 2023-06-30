@@ -207,3 +207,11 @@ function showCurrentPlayer(player) {
 function setTurn() {
   return "Turn: " + gameInfo.turn;
 }
+
+// let cell0 = document.querySelector("#cell0");
+
+// (cell0.style.borderWidth = " 0 "), "10px", "4px", "0";
+
+// let cell1 = document.querySelector("#cell1");
+
+// (cell1.style.borderWidth = "0"), "0", "4px", "4px", "4px";

@@ -85,7 +85,7 @@ main {
 }
 
 #player1 {
-  color: rgb(55, 9, 56);
+  color: rgb(45, 2, 32);
 }
 #player2 {
   color: #170833;
@@ -174,80 +174,14 @@ main {
   border-width: 4px 0 0 4px;
 }
 
-@keyframes controls-show {
-  0% {
-    left: -38%;
-    opacity: 0;
-  }
-  100% {
-    left: 17%;
-    opacity: 1;
-  }
-}
-@keyframes controls-hide {
-  0% {
-    left: 17%;
-    opacity: 1;
-  }
-  100% {
-    left: -38%;
-    opacity: 0;
-  }
-}
-@keyframes shake {
-  0% {
-    opacity: 0;
-  }
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
-  60% {
-    opacity: 1;
-  }
-}
-@keyframes from-right {
-  0% {
-    opacity: 0;
-    left: 100%;
-  }
-  100% {
-    opacity: 1;
-    left: 55%;
-  }
-}
-@keyframes fade-to-right {
-  0% {
-    opacity: 1;
-    left: 55%;
-  }
-  100% {
-    opacity: 0;
-    left: 100%;
-  }
-}
 .fade {
   animation: fade 2000ms ease 1 normal;
 }
+
 .stamp {
   animation: stamp 800ms ease-in 1 normal;
 }
+
 @keyframes fade {
   0% {
     opacity: 1;
@@ -267,8 +201,9 @@ main {
   }
 }
 .move-indicator {
-  animation: move-indicator 800ms linear alternate infinite;
+  animation: move-indicator 1000ms linear alternate infinite;
 }
+
 @keyframes move-indicator {
   0% {
     opacity: 1;
