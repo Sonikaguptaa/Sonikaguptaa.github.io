@@ -1,4 +1,4 @@
-let gameInfo = {
+let game = {
     time: 0,
     winner: "",
     turn: 0,
@@ -25,10 +25,9 @@ function startGame() {
   totalTime = "";
   seconds = 0;
   minutes = 0;
-  gameInfo.turn = 0;
-  gameInfo.winner = "";
+  game.turn = 0;
+  game.winner = "";
   document.getElementById("turn").innerHTML = setTurn();
-  gameInfo.time = new Date();
   currentSign = "X";
   player1Name = document.getElementById("player1").innerHTML;
   player2Name = document.getElementById("player2").innerHTML;
@@ -36,7 +35,7 @@ function startGame() {
   if (numberOfGames === 1) {
     firstPlayer = player1Name;
   } else {
-    modifyPlayersAndColors();
+    modifyPlayers();
   }
 
   currentPlayer = firstPlayer;
@@ -63,24 +62,24 @@ function moveFlow(event) {
   }
 
   drawMove(cell);
-  ++gameInfo.turn;
+  ++game.turn;
   document.getElementById("turn").innerHTML = setTurn();
   currentSign = currentSign === "X" ? "O" : "X";
 
   if (checkWinner()) {
     addStamp(currentPlayer);
-    gameInfo.winner = currentPlayer;
-    gameLog.winner = currentPlayer;
+    game.winner = currentPlayer;
+    game.winner = currentPlayer;
 
     endGame();
 
     return true;
   }
 
-  if (gameInfo.turn === 9) {
+  if (game.turn === 9) {
     addStamp("Draw!");
-    gameInfo.winner = "Draw";
-    gameLog.winner = "Draw";
+    game.winner = "Draw";
+    game.winner = "Draw";
     endGame();
     return true;
   }
@@ -90,10 +89,8 @@ function moveFlow(event) {
 }
 
 function endGame() {
-  saveGameLog("Game Log");
   gameInProgress = false;
-  ++numberOfGames;
-  clearInterval(timeFlow);
+
   document.getElementById("play-area").removeEventListener("click", moveFlow);
   setTimeout(stampFade, 1000);
   setTimeout(removeElement.bind(null, "stamp"), 3000);
@@ -138,10 +135,10 @@ function checkIfValidMove(cell) {
 }
 
 function drawMove(cell) {
-  moveHistory[gameInfo.turn] = {
+  moveHistory[game.turn] = {
     cell: cell,
     sign: currentSign,
-    turn: gameInfo.turn + 1,
+    turn: game.turn + 1,
     playerName: currentPlayer,
   };
   tableCheck[cell] = currentSign;
@@ -204,7 +201,7 @@ function showCurrentPlayer(player) {
   }
 }
 function setTurn() {
-  return "Turn: " + gameInfo.turn;
+  return "Turn: " + game.turn;
 }
 
 // let cell0 = document.querySelector("#cell0");
