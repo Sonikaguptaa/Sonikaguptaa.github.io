@@ -22,7 +22,6 @@ function startGame() {
   clearTable();
   document.getElementById("play-area").addEventListener("click", moveFlow);
   moveHistory = [];
-
   totalTime = "";
   seconds = 0;
   minutes = 0;

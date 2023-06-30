@@ -111,7 +111,7 @@ main {
   transition: all ease 800ms;
 }
 #play-area {
-  background: rgba(128, 128, 128, 0.3);
+  background: #8080804d;
   width: 80%;
   height: 80%;
   display: flex;
